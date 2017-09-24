@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrz-fI-Njc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrz-fI-Njc" userLabel="Label Constraint">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="345"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GJ-Ce-brK" userLabel="Question Label">
@@ -91,53 +91,71 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYI-Ly-TJ0" userLabel="Lower Contianer">
                                 <rect key="frame" x="0.0" y="345" width="375" height="386"/>
                                 <subviews>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5N-xc-sVz" userLabel="False Button">
-                                        <rect key="frame" x="222" y="60" width="128" height="56"/>
-                                        <color key="backgroundColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="False">
-                                            <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="answerPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7ML-SG-qL1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exB-ZS-1U0" userLabel="True Button">
-                                        <rect key="frame" x="25" y="60" width="128" height="56"/>
-                                        <color key="backgroundColor" red="0.1911550909280777" green="0.6378670334815979" blue="0.26147949695587158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OE9-ta-4iz" userLabel="Button Constraint">
+                                        <rect key="frame" x="25" y="165" width="325" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exB-ZS-1U0" userLabel="True Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="56"/>
+                                                <color key="backgroundColor" red="0.1911550909280777" green="0.6378670334815979" blue="0.26147949695587158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="128" id="AKm-GO-sy5"/>
+                                                    <constraint firstAttribute="height" constant="56" id="J5O-KN-3m1"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="pJr-L2-bqf"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="ww2-eR-cEE"/>
+                                                </constraints>
+                                                <state key="normal" title="True">
+                                                    <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E6e-2f-z0q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5N-xc-sVz" userLabel="False Button">
+                                                <rect key="frame" x="197" y="0.0" width="128" height="56"/>
+                                                <color key="backgroundColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="cT5-CO-T5b"/>
+                                                    <constraint firstAttribute="width" constant="128" id="cfX-Gs-yLt"/>
+                                                </constraints>
+                                                <state key="normal" title="False">
+                                                    <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="answerPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7ML-SG-qL1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="AKm-GO-sy5"/>
-                                            <constraint firstAttribute="height" constant="56" id="J5O-KN-3m1"/>
+                                            <constraint firstAttribute="bottom" secondItem="T5N-xc-sVz" secondAttribute="bottom" id="CTc-YH-fso"/>
+                                            <constraint firstAttribute="height" constant="56" id="HMx-UA-CPR"/>
+                                            <constraint firstItem="exB-ZS-1U0" firstAttribute="leading" secondItem="OE9-ta-4iz" secondAttribute="leading" id="IVc-VS-C3x"/>
+                                            <constraint firstAttribute="bottom" secondItem="exB-ZS-1U0" secondAttribute="bottom" id="VXw-QK-WCd"/>
+                                            <constraint firstItem="exB-ZS-1U0" firstAttribute="top" secondItem="OE9-ta-4iz" secondAttribute="top" id="vj1-6M-hyf"/>
+                                            <constraint firstAttribute="trailing" secondItem="T5N-xc-sVz" secondAttribute="trailing" id="whi-ET-gcb"/>
+                                            <constraint firstItem="T5N-xc-sVz" firstAttribute="top" secondItem="OE9-ta-4iz" secondAttribute="top" id="xLI-xa-ShC"/>
                                         </constraints>
-                                        <state key="normal" title="True">
-                                            <color key="titleColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="answerPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E6e-2f-z0q"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16847139596939087" green="0.51802176237106323" blue="0.82454192638397217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="T5N-xc-sVz" firstAttribute="top" secondItem="lYI-Ly-TJ0" secondAttribute="top" constant="60" id="Lwv-Er-nPS"/>
-                                    <constraint firstAttribute="trailing" secondItem="T5N-xc-sVz" secondAttribute="trailing" constant="25" id="OPX-As-oBh"/>
-                                    <constraint firstItem="exB-ZS-1U0" firstAttribute="leading" secondItem="lYI-Ly-TJ0" secondAttribute="leading" constant="25" id="aCu-qw-v0d"/>
-                                    <constraint firstItem="exB-ZS-1U0" firstAttribute="width" secondItem="T5N-xc-sVz" secondAttribute="width" id="d4x-tK-Odu"/>
-                                    <constraint firstItem="exB-ZS-1U0" firstAttribute="height" secondItem="T5N-xc-sVz" secondAttribute="height" id="kdJ-1C-vWq"/>
-                                    <constraint firstItem="exB-ZS-1U0" firstAttribute="top" secondItem="lYI-Ly-TJ0" secondAttribute="top" constant="60" id="zYd-e5-frX"/>
+                                    <constraint firstItem="OE9-ta-4iz" firstAttribute="centerY" secondItem="lYI-Ly-TJ0" secondAttribute="centerY" id="2tZ-HY-39I"/>
+                                    <constraint firstAttribute="trailing" secondItem="OE9-ta-4iz" secondAttribute="trailing" constant="25" id="hgh-27-xhl"/>
+                                    <constraint firstItem="OE9-ta-4iz" firstAttribute="leading" secondItem="lYI-Ly-TJ0" secondAttribute="leading" constant="25" id="oKJ-yL-00a"/>
+                                    <constraint firstItem="OE9-ta-4iz" firstAttribute="centerX" secondItem="lYI-Ly-TJ0" secondAttribute="centerX" id="sf7-e6-aV9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -166,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="366"/>
+            <point key="canvasLocation" x="161.5" y="365.5"/>
         </scene>
     </scenes>
 </document>
